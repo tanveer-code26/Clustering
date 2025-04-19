@@ -1,4 +1,4 @@
-# Clustering Analysis on Wholesale Customers Dataset
+# Clustering Analysis 
 
 ## 📅 Overview
 This project conducts a comprehensive comparative analysis of clustering algorithms on the **Wholesale Customers Dataset** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00292/Wholesale%20customers%20data.csv). We explore how different clustering methods and preprocessing techniques affect clustering performance.
