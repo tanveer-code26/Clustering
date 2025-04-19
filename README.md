@@ -1,58 +1,88 @@
-# Clustering Analysis
+# Clustering Analysis on Wholesale Customers Dataset
 
-## Overview
-This project presents a comparative analysis of different clustering algorithms applied to the **Wholesale Customers Data** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00292/Wholesale%20customers%20data.csv). The clustering techniques evaluated include:
+## 📅 Overview
+This project conducts a comprehensive comparative analysis of clustering algorithms on the **Wholesale Customers Dataset** from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/machine-learning-databases/00292/Wholesale%20customers%20data.csv). We explore how different clustering methods and preprocessing techniques affect clustering performance.
 
+### 🌐 Clustering Algorithms Implemented:
 - **K-Means Clustering**
-- **Hierarchical Clustering**
+- **Agglomerative (Hierarchical) Clustering**
 - **Mean-Shift Clustering**
 
-Various preprocessing methods were explored to assess their impact on clustering performance:
-
-- No Preprocessing
-- Normalization
+### ⚖️ Preprocessing Techniques Applied:
+- Raw Data (No preprocessing)
+- Standard Scaling
 - Power Transformation
 - PCA (Principal Component Analysis)
 
-## Dataset
-The dataset contains features representing annual spending in monetary units on diverse product categories:
+---
 
-- Fresh
-- Milk
-- Grocery
-- Frozen
-- Detergents_Paper
-- Delicassen
+## 📊 Dataset Description
+The dataset includes annual spending (in monetary units) of clients on various product categories:
+- **Fresh**
+- **Milk**
+- **Grocery**
+- **Frozen**
+- **Detergents_Paper**
+- **Delicassen**
 
-## Implementation
-### Preprocessing Techniques:
-- **Standard Scaling**: Scales features to have zero mean and unit variance.
-- **Power Transformation**: Makes data more Gaussian-like to stabilize variance and minimize skewness.
-- **PCA (Principal Component Analysis)**: Reduces data dimensions while retaining maximum variance.
+Total number of data points: **440**  
+Number of features used: **6**
 
-### Evaluation Metrics:
-Clustering performance is assessed using the following metrics:
+---
 
-1. **Silhouette Score** – Indicates how well data points fit within their assigned cluster.
-2. **Calinski-Harabasz Score** – Evaluates cluster separation by comparing between- and within-cluster dispersion.
-3. **Davies-Bouldin Score** – Measures cluster similarity; lower values indicate better-defined clusters.
+## ⚙️ Methodology & Implementation
 
-### Outputs:
-Results are generated and saved in images folder as:
+### 💡 Preprocessing Steps:
+- **Standard Scaling**: Rescales features to have a mean of 0 and a standard deviation of 1.
+- **Power Transformation**: Reduces skewness and makes data distribution more Gaussian-like.
+- **PCA**: Reduces dimensionality to improve visualization and potentially enhance clustering quality.
 
-- **`clustering_results.csv`** – Contains scores from each algorithm-preprocessing combination.
-- **Cluster Visualizations** – Includes visual output for each algorithm (e.g., `K-Means_clusters.png`, `Hierarchical_clusters.png`, `Mean-Shift_clusters.png`).
-- **Dendrogram** – Hierarchical clustering dendrogram saved as `dendrogram.png`.
-- **Performance Comparison Table** – A consolidated view of all evaluation scores.
+### 📊 Evaluation Metrics:
+To assess the performance of each clustering method, we used:
 
-### Sample Visualizations:
+1. **Silhouette Score** – Measures how similar an object is to its own cluster vs. other clusters.
+2. **Calinski-Harabasz Index** – Assesses separation between clusters (higher is better).
+3. **Davies-Bouldin Index** – Evaluates average similarity between clusters (lower is better).
 
-#### K-Means Clustering
-![K-Means_clusters](https://github.com/user-attachments/assets/545fac4a-9686-4f20-b954-ec9185f344c0)
+### 📈 Outputs Generated:
 
-#### Hierarchical Clustering Dendrogram
-![dendrogram](https://github.com/user-attachments/assets/bc4fa015-6dc9-43d0-9b2f-a1655a8b17d7)
+- `clustering_results.csv`: Contains all performance scores (Silhouette, Calinski-Harabasz, Davies-Bouldin) for each algorithm and preprocessing combination.
+- **Visualizations**:
+  - `KMeans_clusters.png`
+  - `Hierarchical_clusters.png`
+  - `MeanShift_clusters.png`
+  - `dendrogram.png` for Hierarchical clustering
 
+---
 
-## Conclusion
-This project offers insights into how different clustering algorithms behave under various preprocessing techniques. The optimal clustering approach may vary depending on the evaluation metric and the structure of the dataset.
+## 🔄 Sample Visual Results
+
+### 📅 K-Means Clustering
+![K-Means Clusters](https://github.com/user-attachments/assets/545fac4a-9686-4f20-b954-ec9185f344c0)
+
+### 📅 Hierarchical Clustering Dendrogram
+![Dendrogram](https://github.com/user-attachments/assets/bc4fa015-6dc9-43d0-9b2f-a1655a8b17d7)
+
+---
+
+## 🚀 Conclusion
+
+After evaluating all clustering methods and preprocessing combinations:
+
+- **Best Clustering Algorithm**: `KMeans`
+- **Best Number of Clusters**: `3`
+- **Best Silhouette Score**: `0.5483`
+
+This project illustrates that **preprocessing can greatly impact clustering effectiveness**, and the optimal clustering technique depends on both the dataset characteristics and the evaluation metrics used.
+
+---
+
+## 📖 References
+- [UCI ML Repository – Wholesale Customers Dataset](https://archive.ics.uci.edu/ml/datasets/Wholesale+customers)
+- Scikit-learn Documentation
+- Python Data Science Libraries: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
+
+---
+
+Feel free to explore and tweak the parameters to see how clustering behavior changes with different settings!
+
