@@ -84,5 +84,3 @@ This project illustrates that **preprocessing can greatly impact clustering effe
 
 ---
 
-Feel free to explore and tweak the parameters to see how clustering behavior changes with different settings!
-
